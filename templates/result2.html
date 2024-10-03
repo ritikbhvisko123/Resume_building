@@ -1,0 +1,510 @@
+<!-- templates/result.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Resume Details</h2>
+        <p><strong>Full Name:</strong> {{ name }}</p>
+        <p><strong>Personal Summary:</strong> {{ summary }}</p>
+        <p><strong>University:</strong> {{ university }}</p>
+        <p><strong>Degree:</strong> {{ degree }}</p>
+        <p><strong>Graduation Year:</strong> {{ graduation_year }}</p>
+        <p><strong>Skills:</strong> {{ skills }}</p>
+        <p><strong>Languages:</strong> {{ languages }}</p>
+        <p><strong>Additional Experiences:</strong> {{ experience }}</p>
+        <p><strong>Contact Info (Address):</strong> {{ address }}</p>
+        <p><strong>Phone:</strong> {{ phone }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+    </div>
+
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #2a2a72;
+        }
+        h2 {
+            font-size: 24px;
+            color: #2a2a72;
+            border-bottom: 2px solid #2a2a72;
+            padding-bottom: 5px;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .download-btn {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #2a2a72;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background-color: #1a1a5a;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <h1>Your Resume</h1>
+
+        <h2>Personal Details</h2>
+        <p><strong>Name:</strong> {{ resume.name }}</p>
+        <p><strong>Email:</strong> {{ resume.email }}</p>
+        <p><strong>Phone:</strong> {{ resume.phone }}</p>
+        <p><strong>Address:</strong> {{ resume.address }}</p>
+        -->
+<!-- 
+        <h2>Summary</h2>
+        <p>{{ generated_summary }}</p> -->
+<!-- 
+        <h2>Education</h2>
+        <p><strong>{{ resume.degree }}</strong>, {{ resume.university }} ({{ resume.graduation_year }})</p>
+
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in resume.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Languages</h2>
+        <ul>
+            {% for language in resume.languages %}
+                <li>{{ language }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Experience</h2>
+        <ul>
+            {% for job in resume.experience %}
+                <li>{{ job }}</li>
+            {% endfor %}
+        </ul>
+
+         -->
+
+        
+
+        <!-- <a href="#" class="download-btn">Download PDF</a>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #424297;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 25px;
+            margin-top: 21px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills, .languages {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .languages li {
+            background-color: #ddd;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .references p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{name}}</h1>
+        <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: {{ address }}</p>
+            <p>Phone: {{ phone }}</p>
+            <p>Email: {{ email }}</p>
+            <p>Website: www.reallygreatsite.com</p>
+        </div>
+        
+        <div class="section personal-summary">
+            <h2>Personal Summary</h2>
+            <p> <h2>Summary</h2>
+            <p>{{ generated_summary }}</p></p>
+        </div>
+
+        <div class="section academic-background">
+            <h2>Academic Background</h2>
+            <h3>{{ university }}</h3>
+            <p>{{ degree }}| {{ graduation_year }}</p>
+            <ul>
+                <li>Specialised in software engineering and security</li>
+                <li>Member of UofV Programming Society</li>
+    
+                <li>{{ experience }}</li>
+                <li>Created online security system for final project</li>
+                <li>Won Best in Programming award at student showcase</li>
+            </ul>
+        </div>
+
+        <div class="section additional-experience">
+             <h2>Additional Experiences</h2>
+            <h4>{{ experience }}</h4>
+            <p>University of Valley IT Dept. | 2017 to 2020</p>  -->
+            <!-- <ul>
+                <li>Assisted students, faculty, and university staff with IT-related troubleshooting</li>
+                <li>Helped IT Head restructure university web security system</li>
+            </ul> -->
+
+            <!-- <h3>Senior Year Intern</h3>
+            <p>WEBsecurance Networks Inc. | 2020</p>
+            <ul>
+                <li>Shadowed senior programmers to learn about creating security architectures</li>
+                <li>Programmed various security software to test on local networks</li>
+            </ul> -->
+        <!-- </div>
+
+        <div class="section additional-skills">
+            <h2>Additional Skills</h2>
+            <ul class="skills">
+                <li>{{ skills }}</li>
+                <li>Fluent in Hindi, English</li>
+                <li>Excellent communication skills</li>
+            </ul>
+        </div> -->
+
+        <!-- <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: 123 Anywhere St., Any City, State, Country 12345</p>
+            <p>Phone: 123-456-789</p>
+            <p>Email: hello@reallygreatsite.com</p>
+            <p>Website: www.reallygreatsite.com</p>
+        </div> 
+    </div> -->
+<!-- 
+</body>
+</html>    -->
+
+ 
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #424297;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 25px;
+            margin-top: 21px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills, .languages {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .languages li {
+            background-color: #ddd;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .references p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{name}}</h1>
+        <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: {{ address }}</p>
+            <p>Phone: {{ phone }}</p>
+            <p>Email: {{ email }}</p>
+            <p>Website: www.reallygreatsite.com</p>
+        </div>
+        
+        <div class="section personal-summary">
+            <h2>Personal Summary</h2>
+            <p> <h2>Summary</h2>
+            <p>{{ generated_summary }}</p></p>
+        </div>
+
+        <div class="section academic-background">
+            <h2>Academic Background</h2>
+            <h3>{{ university }}</h3>
+            <p>{{ degree }}| {{ graduation_year }}</p>
+            <ul>
+                <li>Specialised in software engineering and security</li>
+                <li>Member of UofV Programming Society</li>
+    
+                <li>{{ experience }}</li>
+                <li>Created online security system for final project</li>
+                <li>Won Best in Programming award at student showcase</li>
+            </ul>
+        </div>
+
+        <div class="section additional-experience">
+             <h2>Additional Experiences</h2>
+            <h4>{{ experience }}</h4>
+  
+</body>
+</html>    -->
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #424297;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 25px;
+            margin-top: 21px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills, .languages {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .languages li {
+            background-color: #ddd;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .references p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ resume.name }}</h1>
+        <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: {{ resume.address }}</p>
+            <p>Phone: {{ resume.phone }}</p>
+            <p>Email: {{ resume.email }}</p>
+            <p>Website: www.reallygreatsite.com</p>
+        </div>
+        
+        <div class="section personal-summary">
+            <h2>Personal Summary</h2>
+            <p>{{ generated_summary }}</p>
+        </div>
+
+        <div class="section academic-background">
+            <h2>Academic Background</h2>
+            <h3>{{ resume.university }}</h3>
+            <p>{{ resume.degree }} | {{ resume.graduation_year }}</p>
+            <ul>
+                <li>Specialised in software engineering and security</li>
+                <li>Member of UofV Programming Society</li>
+                <li>{{ resume.experience }}</li>
+                <li>Created online security system for final project</li>
+                <li>Won Best in Programming award at student showcase</li>
+            </ul>
+        </div>
+
+        <div class="section additional-experience">
+            <h2>Additional Experiences</h2>
+            <h4>{{ resume.experience }}</h4>
+        </div>
+    </div>
+
+</body>
+</html>

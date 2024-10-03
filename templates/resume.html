@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume_data.name }}'s Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #424297;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 25px;
+            margin-top: 21px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills, .languages {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .languages li {
+            background-color: #ddd;
+            padding: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ resume_data.name }}</h1>
+        <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: {{ resume_data.address }}</p>
+            <p>Phone: {{ resume_data.phone }}</p>
+            <p>Email: {{ resume_data.email }}</p>
+            <p>Website: {{ resume_data.website }}</p>
+        </div>
+        
+        <div class="section personal-summary">
+            <h2>Personal Summary</h2>
+            <p>{{ resume_data.summary }}</p>
+        </div>
+
+        <div class="section academic-background">
+            <h2>Academic Background</h2>
+            <h3>{{ resume_data.university }}</h3>
+            <p>{{ resume_data.degree }} | Graduated {{ resume_data.graduation_year }}</p>
+
+            <h3>{{ resume_data.technical_academy }}</h3>
+            <p>{{ resume_data.technical_course }}</p>
+        </div>
+
+        <div class="section additional-experience">
+            <h2>Additional Experiences</h2>
+            <h3>{{ resume_data.experience1_title }}</h3>
+            <p>{{ resume_data.experience1_desc }}</p>
+
+            <h3>{{ resume_data.experience2_title }}</h3>
+            <p>{{ resume_data.experience2_desc }}</p>
+        </div>
+
+        <div class="section additional-skills">
+            <h2>Additional Skills</h2>
+            <ul class="skills">
+                {% for skill in resume_data.skills %}
+                
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f4f4f4;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ name }}</h1>
+        <h2>Personal Summary</h2>
+        <p>{{ summary }}</p>
+
+        <h2>Academic Background</h2>
+        <p>{{ university }} - {{ degree }} (Graduated: {{ graduation_year }})</p>
+
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Languages</h2>
+        <ul>
+            {% for language in languages %}
+            <li>{{ language }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Additional Experiences</h2>
+        <p>{{ experience }}</p>
+
+        <h2>References</h2>
+        <p>{{ references }}</p>
+
+        <h2>Contact Info</h2>
+        <p>Address: {{ address }}</p>
+        <p>Phone: {{ phone }}</p>
+        <p>Email: {{ email }}</p>
+        <p>Website: {{ website }}</p>
+    </div>
+
+</body>
+</html> -->

@@ -1,0 +1,290 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #424297;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 25px;
+            margin-top: 21px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills, .languages {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .languages li {
+            background-color: #ddd;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .references p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Raj Patel</h1>
+        <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: 123 Anywhere St., Any City, State, Country 12345</p>
+            <p>Phone: 123-456-789</p>
+            <p>Email: hello@reallygreatsite.com</p>
+            <p>Website: www.reallygreatsite.com</p>
+        </div>
+        
+        <div class="section personal-summary">
+            <h2>Personal Summary</h2>
+            <p>I am a software engineer who specialises in software programming and computer security. I'm proficient in a number of programming languages and systems.</p>
+        </div>
+
+        <div class="section academic-background">
+            <h2>Academic Background</h2>
+            <h3>University of Valley</h3>
+            <p>BS Computer Engineering | Graduated 2020</p>
+            <ul>
+                <li>Specialised in software engineering and security</li>
+                <li>Recipient of the Student Academic Recognition Award</li>
+                <li>Member of UofV Programming Society</li>
+            </ul>
+
+            <h3>VRT Technical Academy</h3>
+            <p>Software Engineering Course | 2017 to 2018</p>
+            <ul>
+                <li>3-month intensive program for computer science students</li>
+                <li>Created online security system for final project</li>
+                <li>Won Best in Programming award at student showcase</li>
+            </ul>
+        </div>
+
+        <div class="section additional-experience">
+            <h2>Additional Experiences</h2>
+            <h3>Student Assistant</h3>
+            <p>University of Valley IT Dept. | 2017 to 2020</p>
+            <ul>
+                <li>Assisted students, faculty, and university staff with IT-related troubleshooting</li>
+                <li>Helped IT Head restructure university web security system</li>
+            </ul>
+
+            <h3>Senior Year Intern</h3>
+            <p>WEBsecurance Networks Inc. | 2020</p>
+            <ul>
+                <li>Shadowed senior programmers to learn about creating security architectures</li>
+                <li>Programmed various security software to test on local networks</li>
+            </ul>
+        </div>
+
+        <div class="section additional-skills">
+            <h2>Additional Skills</h2>
+            <ul class="skills">
+                <li>Proficient in Javascript, C/C++, Java, Python, Kotlin, Go</li>
+                <li>Fluent in Hindi, English, and Marathi</li>
+                <li>Excellent communication skills</li>
+            </ul>
+        </div>
+
+        <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: 123 Anywhere St., Any City, State, Country 12345</p>
+            <p>Phone: 123-456-789</p>
+            <p>Email: hello@reallygreatsite.com</p>
+            <p>Website: www.reallygreatsite.com</p>
+        </div> 
+    </div>
+
+</body>
+</html>   
+
+
+
+
+
+<!-- Resume Builder form -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Resume Builder Form</h1>
+        <form action="/generate_resume" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="summary">Personal Summary:</label>
+            <textarea id="summary" name="summary" rows="4" required></textarea>
+
+            <label for="university">University:</label>
+            <input type="text" id="university" name="university" required>
+
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree" required>
+
+            <label for="graduation_year">Graduation Year:</label>
+            <input type="text" id="graduation_year" name="graduation_year" required>
+
+            <label for="skills">Skills (comma separated):</label>
+            <input type="text" id="skills" name="skills" required>
+
+            <label for="languages">Languages (comma separated):</label>
+            <input type="text" id="languages" name="languages" required>
+
+            <label for="experience">Additional Experiences:</label>
+            <textarea id="experience" name="experience" rows="4" required></textarea>
+
+            <label for="references">References:</label>
+            <textarea id="references" name="references" rows="4" required></textarea>
+
+            <label for="address">Contact Info (Address):</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html> -->
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+</head>
+<body>
+    <h1>Create Your Resume</h1>
+    <form action="/create_resume" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+        
+        <label for="summary">Professional Summary:</label><br>
+        <textarea id="summary" name="summary" rows="4" required></textarea><br><br>
+        
+        <label for="education">Education:</label><br>
+        <textarea id="education" name="education" rows="4" required></textarea><br><br>
+        
+        <label for="experience">Experience:</label><br>
+        <textarea id="experience" name="experience" rows="4" required></textarea><br><br>
+        
+        <label for="skills">Skills:</label><br>
+        <textarea id="skills" name="skills" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Create Resume">
+    </form>
+</body>
+</html> -->

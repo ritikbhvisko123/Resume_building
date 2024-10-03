@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #424297;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 25px;
+            margin-top: 21px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills, .languages {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .languages li {
+            background-color: #ddd;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .references p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ resume.name }}</h1>
+        <div class="section contact-info">
+            <h2>Contact Info</h2>
+            <p>Address: {{ resume.address }}</p>
+            <p>Phone: {{ resume.phone }}</p>
+            <p>Email: {{ resume.email }}</p>
+            <p>Website: www.reallygreatsite.com</p>
+        </div>
+        
+        <div class="section personal-summary">
+            <h2>Personal Summary</h2>
+            <p>{{ generated_summary }}</p>
+        </div>
+
+        <div class="section academic-background">
+            <h2>Academic Background</h2>
+            <h3>{{ resume.university }}</h3>
+            <p>{{ resume.degree }} | {{ resume.graduation_year }}</p>
+            <ul>
+                <li>Specialised in software engineering and security</li>
+                <li>Member of UofV Programming Society</li>
+                <li>{{ resume.experience }}</li>
+                <li>Created online security system for final project</li>
+                <li>Won Best in Programming award at student showcase</li>
+            </ul>
+        </div>
+
+        <div class="section additional-experience">
+            <h2>Additional Experiences</h2>
+            <h4>{{ resume.experience }}</h4>
+        </div>
+    </div>
+
+</body>
+</html>
